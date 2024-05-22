@@ -1,0 +1,10 @@
+<div>
+    <h1>Real-time Chat Application</h1>
+    <div *ngFor="let msg of messages">
+      <strong>{{ msg.user }}:</strong> {{ msg.message }}
+    </div>
+    <input type="text" [(ngModel)]="user" placeholder="Your Name">
+    <input type="text" [(ngModel)]="message" placeholder="Your Message">
+    <button (click)="sendMessage(user, message)">Send</button>
+  </div>
+  
